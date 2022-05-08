@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/gestion-banque
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
