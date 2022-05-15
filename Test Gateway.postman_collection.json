@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "e4744db0-1592-4e20-bb33-68ed66338722",
+		"name": "Test Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/gateway/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"gateway",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "71d6ed25-6853-48ae-a35f-14e443b616fc",
+		"name": "Test Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"amal\",\r\n    \"lastName\" : \"sqrt\",\r\n    \"balance\" : 516415,\r\n    \"email\" : \"test@te.mo\",\r\n    \"address\" : {\r\n        \"number\" : \"65\",\r\n        \"street\" : \"1\",\r\n        \"city\" : \"casa\",\r\n        \"country\" : \"maroc\"\r\n    },\r\n    \"operations\" : [\r\n        {\r\n            \"type\" : \"CREDIT\",\r\n            \"value\" : 25,\r\n            \"startDate\" : \"2022-03-03\",\r\n            \"endDate\" : \"2023-03-03\"\r\n        },\r\n        {\r\n            \"type\" : \"DEBIT\",\r\n            \"value\" : 2625,\r\n            \"startDate\" : \"2019-05-13\",\r\n            \"endDate\" : \"2020-01-28\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/client/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get client by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"firstName\" : \"oussama\",\r\n    \"lastName\" : \"abouzid\",\r\n    \"balance\" : 415,\r\n    \"email\" : \"oussa@te.mo\",\r\n    \"address\" : {\r\n        \"number\" : \"69\",\r\n        \"street\" : \"rue 1\",\r\n        \"city\" : \"casablanca\",\r\n        \"country\" : \"maroc\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/client/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get operations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/operation/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"operation",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/address/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"address",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete operation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1337/client/operation?client=25&operation=27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"operation"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "25"
+						},
+						{
+							"key": "operation",
+							"value": "27"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add operation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"type\" : \"CREDIT\",\r\n            \"value\" : 12125,\r\n            \"startDate\" : \"2012-03-03\",\r\n            \"endDate\" : \"2027-12-03\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/client/operation/33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"operation",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ids",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/client/ids",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"client",
+						"ids"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
